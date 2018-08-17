@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16F73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="EstimoteBeacon" representedClassName="EstimoteBeacon" syncable="YES" codeGenerationType="class">
+        <attribute name="deviceid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="major" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="minor" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="proximity" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="sector" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sector" inverseName="beacon" inverseEntity="Sector" syncable="YES"/>
+    </entity>
+    <entity name="Implementacion" representedClassName="Implementacion" syncable="YES" codeGenerationType="class">
+        <attribute name="direccion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="latitud" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="longitud" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="telefono" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="marcaxGrupoComercial" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MarcaxGrupoComercial" inverseName="implementacion" inverseEntity="MarcaxGrupoComercial" syncable="YES"/>
+        <relationship name="sector" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Sector" inverseName="implementacion" inverseEntity="Sector" syncable="YES"/>
+    </entity>
+    <entity name="MarcaxGrupoComercial" representedClassName="MarcaxGrupoComercial" syncable="YES" codeGenerationType="class">
+        <attribute name="custom_header_backgroundColor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="custom_header_backgroundImage" optional="YES" attributeType="Binary" storedInTruthFile="YES" syncable="YES"/>
+        <attribute name="custom_header_foregroundColor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="custom_header_textColor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="custom_list_backgroundColor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="custom_list_hover_backgroundColor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="custom_list_hover_contentColor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="custom_list_hover_titleColor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="custom_list_normal_backgroundColor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="custom_list_normal_contentColor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="custom_list_normal_titleColor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="grupo_comercial_id" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="last_update" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="marca_id" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="implementacion" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Implementacion" inverseName="marcaxGrupoComercial" inverseEntity="Implementacion" syncable="YES"/>
+    </entity>
+    <entity name="Pauta" representedClassName="Pauta" syncable="YES" codeGenerationType="class">
+        <attribute name="a_deleted" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="a_favorited" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="a_listed" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="a_opened" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="a_synced" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="active" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="campaign_id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="detail_brand_image" optional="YES" attributeType="Binary" storedInTruthFile="YES" syncable="YES"/>
+        <attribute name="detail_content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="detail_header_image" optional="YES" attributeType="Binary" storedInTruthFile="YES" syncable="YES"/>
+        <attribute name="detail_restrictions" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="detail_title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="list_content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="list_image" optional="YES" attributeType="Binary" storedInTruthFile="YES" syncable="YES"/>
+        <attribute name="list_title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="sector" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Sector" inverseName="pauta" inverseEntity="Sector" syncable="YES"/>
+    </entity>
+    <entity name="Sector" representedClassName="Sector" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="last_fetch" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="beacon" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EstimoteBeacon" inverseName="sector" inverseEntity="EstimoteBeacon" syncable="YES"/>
+        <relationship name="implementacion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Implementacion" inverseName="sector" inverseEntity="Implementacion" syncable="YES"/>
+        <relationship name="pauta" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Pauta" inverseName="sector" inverseEntity="Pauta" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="EstimoteBeacon" positionX="-4815" positionY="162" width="135" height="165"/>
+        <element name="Implementacion" positionX="-5024" positionY="342" width="128" height="163"/>
+        <element name="MarcaxGrupoComercial" positionX="-4815" positionY="347" width="171" height="283"/>
+        <element name="Pauta" positionX="-5229" positionY="135" width="128" height="328"/>
+        <element name="Sector" positionX="-5031" positionY="81" width="128" height="133"/>
+    </elements>
+</model>

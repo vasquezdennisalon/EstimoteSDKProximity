@@ -1,0 +1,81 @@
+
+/* Class = "UISearchBar"; placeholder = "Buscar"; ObjectID = "1Lz-fw-gtv"; */
+"1Lz-fw-gtv.placeholder" = "Buscar";
+
+/* Class = "UIBarButtonItem"; title = "GuardarItem"; ObjectID = "6qa-6G-1Ty"; */
+"6qa-6G-1Ty.title" = "GuardarItem";
+
+/* Class = "UISegmentedControl"; 7QJ-n6-qbp.segmentTitles[0] = "Gustos"; ObjectID = "7QJ-n6-qbp"; */
+"7QJ-n6-qbp.segmentTitles[0]" = "Gustos";
+
+/* Class = "UISegmentedControl"; 7QJ-n6-qbp.segmentTitles[1] = "Marcas"; ObjectID = "7QJ-n6-qbp"; */
+"7QJ-n6-qbp.segmentTitles[1]" = "Marcas";
+
+/* Class = "UIViewController"; title = "POLITICAS DE USO"; ObjectID = "9fO-2d-ZDV"; */
+"9fO-2d-ZDV.title" = "POLITICAS DE USO";
+
+/* Class = "UILabel"; text = "Deshacer búsqueda personalizada"; ObjectID = "Cq0-b6-szB"; */
+"Cq0-b6-szB.text" = "Deshacer búsqueda personalizada";
+
+/* Class = "UISearchBar"; placeholder = "Buscar"; ObjectID = "GOv-so-YW9"; */
+"GOv-so-YW9.placeholder" = "Buscar";
+
+/* Class = "UINavigationItem"; title = "NOTIFICACIONES"; ObjectID = "IMH-hX-ID2"; */
+"IMH-hX-ID2.title" = "NOTIFICACIONES";
+
+/* Class = "UINavigationItem"; title = "PREFERENCIAS"; ObjectID = "Kjy-La-xJw"; */
+"Kjy-La-xJw.title" = "PREFERENCIAS";
+
+/* Class = "UIViewController"; title = "Notificaciones"; ObjectID = "V2y-jl-npY"; */
+"V2y-jl-npY.title" = "Notificaciones";
+
+/* Class = "UILabel"; text = "BIENVENIDO"; ObjectID = "YEb-i4-q0q"; */
+"YEb-i4-q0q.text" = "BIENVENIDO";
+
+/* Class = "UIViewController"; title = "GUSTOS"; ObjectID = "b2D-az-3Vp"; */
+"b2D-az-3Vp.title" = "GUSTOS";
+
+/* Class = "UIViewController"; title = "TÉRMINOS Y CONDICIONES"; ObjectID = "fQg-hy-crb"; */
+"fQg-hy-crb.title" = "TÉRMINOS Y CONDICIONES";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "ioq-wR-XA9"; */
+"ioq-wR-XA9.title" = "Title";
+
+/* Class = "UIViewController"; title = "PERFIL"; ObjectID = "jdl-Nf-QB8"; */
+"jdl-Nf-QB8.title" = "PERFIL";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "luj-Sb-GfX"; */
+"luj-Sb-GfX.title" = " ";
+
+/* Class = "UIButton"; normalTitle = "Saltar"; ObjectID = "n0q-ma-Hze"; */
+"n0q-ma-Hze.normalTitle" = "Saltar";
+
+/* Class = "UISearchBar"; placeholder = "Buscar"; ObjectID = "oSM-i5-sem"; */
+"oSM-i5-sem.placeholder" = "Buscar";
+
+/* Class = "UISearchBar"; placeholder = "Buscar"; ObjectID = "plL-Mp-jkW"; */
+"plL-Mp-jkW.placeholder" = "Buscar";
+
+/* Class = "UISearchBar"; placeholder = "Buscar"; ObjectID = "seS-mg-iHw"; */
+"seS-mg-iHw.placeholder" = "Buscar";
+
+/* Class = "UISegmentedControl"; uOj-O1-Z8U.segmentTitles[0] = "Nuevos"; ObjectID = "uOj-O1-Z8U"; */
+"uOj-O1-Z8U.segmentTitles[0]" = "Nuevos";
+
+/* Class = "UISegmentedControl"; uOj-O1-Z8U.segmentTitles[1] = "Adquiridos"; ObjectID = "uOj-O1-Z8U"; */
+"uOj-O1-Z8U.segmentTitles[1]" = "Adquiridos";
+
+/* Class = "UIButton"; normalTitle = "CAMBIAR"; ObjectID = "v4Y-nf-qmH"; */
+"v4Y-nf-qmH.normalTitle" = "CAMBIAR";
+
+/* Class = "UINavigationItem"; title = "PERFIL"; ObjectID = "vXF-vI-HLi"; */
+"vXF-vI-HLi.title" = "PERFIL";
+
+/* Class = "UISegmentedControl"; xPa-8F-dEs.segmentTitles[0] = "Favoritos"; ObjectID = "xPa-8F-dEs"; */
+"xPa-8F-dEs.segmentTitles[0]" = "Favoritos";
+
+/* Class = "UISegmentedControl"; xPa-8F-dEs.segmentTitles[1] = "Cupones Conquistados"; ObjectID = "xPa-8F-dEs"; */
+"xPa-8F-dEs.segmentTitles[1]" = "Cupones Conquistados";
+
+/* Class = "UIButton"; normalTitle = "Guardar"; ObjectID = "zr7-Do-fQL"; */
+"zr7-Do-fQL.normalTitle" = "Guardar";

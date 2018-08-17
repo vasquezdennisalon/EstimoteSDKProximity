@@ -1,0 +1,169 @@
+setup_travis
+
+update_fastlane
+
+fastlane_version "2.93.1"
+
+default_platform(:ios)
+
+platform :ios do
+    desc "Make release version and optionaly upload to testflight, github or hockeyapp"
+    lane :make do |options|
+        #constantes
+        appIdentifier = "com.aritec.aupar.deals"
+        ENV["FASTLANE_USER"] = ENV["ITUNES_USER"]
+        ENV["FASTLANE_PASSWORD"] = ENV["ITUNES_PASSWORD"]
+        ENV["DELIVER_USER"] = ENV["ITUNES_USER"]
+        ENV["DELIVER_PASSWORD"] = ENV["ITUNES_PASSWORD"]
+        ENV["MATCH_PASSWORD"] = ENV["MATCH_PASSWORD"]
+
+        #Variables
+	xcargs = "-allowProvisioningUpdates"
+        exportXcargs = "-allowProvisioningUpdates"
+	codesigningIdentity = "iPhone Distribution: Arquitectos e Ingenieros de Tecnologia, S A (9QFB73GJJP)"
+	destination = nil
+	skipPackageIpa = false
+	isPullRequest = false
+        exportMethod = "app-store"
+        matchType = "appstore"
+        gymConfiguration = "Release"
+        gymExportOptions = {
+            provisioningProfiles: { 
+                "com.aritec.aupar.deals" => "match AppStore com.aritec.aupar.deals"
+            },
+            "signingStyle": "manual"
+        }
+        hockeyApppublicIdentifier = "e12bc5626d73484bae386e5d194b027d"
+
+        deployToTestflight = false
+        deployToBeta = false
+        deployToHotfix = false
+        releaseType = "Release Candidate"
+	    
+	if options[:ispullrequest] == "1"
+            isPullRequest = true
+        end
+
+        if options[:deploytotestflight] == "1"
+            deployToTestflight = true
+        end
+
+        if options[:deploytobeta] == "1"
+            deployToBeta = true
+        end
+
+        if options[:deploytohotfix] == "1"
+            deployToHotfix = true
+        end
+
+        if deployToBeta || deployToHotfix
+            deployToTestflight = false
+            exportMethod = "ad-hoc"
+            matchType = "adhoc"
+            gymConfiguration = "Ad Hoc"
+            gymExportOptions = {
+                compileBitcode: false,
+                provisioningProfiles: { 
+                    "com.aritec.aupar.deals" => "match AddHoc com.aritec.aupar.deals"
+                },
+                "signingStyle": "manual"
+            }
+
+            if deployToHotfix
+                releaseType = "Hotfix"
+                hockeyApppublicIdentifier = "550b6ef0966c4a96985a5d050091a583"
+            end
+        end
+	    
+	if isPullRequest
+	    gymConfiguration = "Debug"
+            xcargs = "CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY=\"\""
+	    exportXcargs = "CODE_SIGNING_REQUIRED=NO CODE_SIGN_IDENTITY=\"\""
+	    skipPackageIpa = true
+	    deployToTestflight = false
+	    deployToBeta = false
+	    deployToHotfix = false
+	    gymExportOptions = {
+            }
+	    destination = nil
+	    codesigningIdentity = nil
+	end
+
+        puts "deploy to TestFlight: " + deployToTestflight.to_s
+        puts "deploy to Beta: " + deployToBeta.to_s
+        puts "deploy to Hotfix: " + deployToHotfix.to_s
+        puts "Match type: " + matchType
+        puts "Gym configuration: " + gymConfiguration
+
+        versionName = get_version_number(target: "aupar", configuration: gymConfiguration)
+        buildNumber = get_build_number()
+
+        puts "Make VersionName: " + versionName + " BuildNumber: " + buildNumber.to_s()
+
+        xcversion(version: "~> 9.3")
+
+        cocoapods(
+            clean: true,
+            verbose: true
+        )
+
+        disable_automatic_code_signing(path: "aupar.xcodeproj")
+
+	if !isPullRequest
+            match(
+                git_url: "https://" + ENV["REPO_CERTS_TOKEN"] + "@github.com/aritec-la/aupar.mobile.ios.certs.git",
+                type: matchType,
+	        app_identifier: appIdentifier,
+                readonly: true,
+                git_branch: "master"
+            )
+
+            update_project_provisioning(
+                xcodeproj: "aupar.xcodeproj",
+                profile: ENV["sigh_com.aritec.aupar.deals_" + matchType + "_profile-path"],
+                build_configuration: gymConfiguration
+            )
+	end
+
+        gym(
+            configuration: gymConfiguration,
+            clean: true,
+            silent: false,
+            xcargs: xcargs,
+            export_method: exportMethod,
+            export_xcargs: exportXcargs,
+            export_options: gymExportOptions,
+            export_team_id: "9QFB73GJJP",
+            codesigning_identity: codesigningIdentity,
+	    skip_package_ipa: skipPackageIpa,
+	    destination: destination
+        )
+
+        enable_automatic_code_signing(path: "aupar.xcodeproj")
+
+        if deployToTestflight
+            upload_to_testflight(
+              username: ENV["DELIVER_USER"],
+              app_identifier: appIdentifier,
+              itc_provider: "9QFB73GJJP"
+            )
+        end
+
+        if deployToBeta || deployToHotfix
+	    releaseName = releaseType + " v" + versionName + "(" + buildNumber.to_s() +")\n" +
+		          "Repo: aupar.mobile.ios\\" + git_branch + "]\n" +
+	                  "Commit info:" + last_git_commit()[:commit_hash].to_s()
+
+            hockey(
+                api_token: ENV["HOCKEYAPP_API_KEY"],
+                create_update: true,
+                public_identifier: hockeyApppublicIdentifier,
+                bundle_short_version: versionName,
+                bundle_version: buildNumber,
+                ipa: lane_context[SharedValues::IPA_OUTPUT_PATH],
+                notes: releaseName,
+                mandatory: "1"                
+            )
+        end
+    end
+end

@@ -1,0 +1,38 @@
+language: swift
+sudo: true
+osx_image: xcode9.4
+
+notifications:
+  email: false
+
+cache:
+  - cocoapods
+
+before_install:
+ - gem update --system
+ - gem install xcode-install
+ - gem install fastlane --no-rdoc --no-ri --no-document --quiet
+ - gem install cocoapods
+
+before_script:
+ - export DEPLOYTOTF=0
+ - export DEPLOYTOBETA=0
+ - export DEPLOYTOHOTFIX=0
+ - export ISPULLREQUEST=0
+ - if [[ "$TRAVIS_COMMIT_MESSAGE" = *"[deploy to tf]"* ]]; then export DEPLOYTOTF=1; fi;
+ - if [[ "$TRAVIS_COMMIT_MESSAGE" = *"[deploy to hotfix]"* ]]; then export DEPLOYTOHOTFIX=1; fi;
+ - if [[ "$TRAVIS_COMMIT_MESSAGE" = *"[deploy to beta]"* ]]; then export DEPLOYTOBETA=1; fi;
+ - if [[ "$TRAVIS_PULL_REQUEST" != "false" ]]; then export ISPULLREQUEST=1; fi;
+ - cd aupar
+
+script:
+ - echo $TRAVIS_COMMIT_MESSAGE
+ - echo $TRAVIS_PULL_REQUEST
+ - echo $TRAVIS_TAG
+ - echo $DEPLOYTOTF
+ - echo $DEPLOYTOHOTFIX
+ - echo $DEPLOYTOBETA
+ - echo $ISPULLREQUEST
+ - if [ -z "$TRAVIS_TAG" ]; then
+       fastlane ios make deploytotestflight:"$DEPLOYTOTF" deploytohotfix:"$DEPLOYTOHOTFIX" deploytobeta:"$DEPLOYTOBETA" ispullrequest:"$ISPULLREQUEST";
+   fi;

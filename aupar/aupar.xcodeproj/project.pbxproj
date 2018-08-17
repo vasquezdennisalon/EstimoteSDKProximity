@@ -1,0 +1,770 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2608D47F212397EF0098D19E /* CloudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2608D47E212397EF0098D19E /* CloudManager.swift */; };
+		2608D4812123981C0098D19E /* ProximityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2608D4802123981C0098D19E /* ProximityManager.swift */; };
+		2608D483212398D20098D19E /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2608D482212398D20098D19E /* UIColor+Extensions.swift */; };
+		2608D486212399370098D19E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2608D484212399370098D19E /* ViewController.swift */; };
+		2608D487212399370098D19E /* ViewController+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2608D485212399370098D19E /* ViewController+UI.swift */; };
+		2622193921277F7F0021948C /* BTUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2622193821277F7F0021948C /* BTUtilities.swift */; };
+		3F079E4E1FB2279F003B9F99 /* TrustDefender.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F079E4D1FB2279F003B9F99 /* TrustDefender.framework */; };
+		3F181E211F1D1DE60097355C /* auparunittests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F181E201F1D1DE60097355C /* auparunittests.swift */; };
+		3FC25EF21F29831F002A796E /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FC25EF11F29831F002A796E /* Launch.storyboard */; };
+		CA743CE31E797DC400889148 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA743CE21E797DC400889148 /* AppDelegate.swift */; };
+		CA743CE81E797DC400889148 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA743CE61E797DC400889148 /* Main.storyboard */; };
+		CA743CEA1E797DC400889148 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA743CE91E797DC400889148 /* Assets.xcassets */; };
+		D1E6C66B356AD1FB13A5B925 /* Pods_aupar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 647C46EC9E8739F4C420011B /* Pods_aupar.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3F181E231F1D1DE60097355C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA743CD71E797DC300889148 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CA743CDE1E797DC300889148;
+			remoteInfo = aupar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1911E3FEB1EA30AC7D28ED6D /* Pods-aupar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aupar.release.xcconfig"; path = "Pods/Target Support Files/Pods-aupar/Pods-aupar.release.xcconfig"; sourceTree = "<group>"; };
+		2608D47E212397EF0098D19E /* CloudManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudManager.swift; sourceTree = "<group>"; };
+		2608D4802123981C0098D19E /* ProximityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProximityManager.swift; sourceTree = "<group>"; };
+		2608D482212398D20098D19E /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		2608D484212399370098D19E /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2608D485212399370098D19E /* ViewController+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController+UI.swift"; sourceTree = "<group>"; };
+		2608D48821239C260098D19E /* aupar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = aupar.entitlements; sourceTree = "<group>"; };
+		2622193821277F7F0021948C /* BTUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BTUtilities.swift; sourceTree = "<group>"; };
+		3F079E4D1FB2279F003B9F99 /* TrustDefender.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TrustDefender.framework; sourceTree = "<group>"; };
+		3F181E1E1F1D1DE60097355C /* auparunittests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = auparunittests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F181E201F1D1DE60097355C /* auparunittests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = auparunittests.swift; sourceTree = "<group>"; };
+		3F181E221F1D1DE60097355C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FC25EF11F29831F002A796E /* Launch.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
+		3FE660CB2090E4550034DFE2 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		647C46EC9E8739F4C420011B /* Pods_aupar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_aupar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9259D3D25DDF9CF2AE51FDBE /* Pods-aupar.ad hoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aupar.ad hoc.xcconfig"; path = "Pods/Target Support Files/Pods-aupar/Pods-aupar.ad hoc.xcconfig"; sourceTree = "<group>"; };
+		CA743CDF1E797DC400889148 /* aupar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aupar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA743CE21E797DC400889148 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CA743CE71E797DC400889148 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CA743CE91E797DC400889148 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CA743CEE1E797DC400889148 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAF551051E82F50000514E44 /* ObjCBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjCBridge.h; sourceTree = "<group>"; };
+		E3894730505E5964FD60CA34 /* Pods-aupar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-aupar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-aupar/Pods-aupar.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F181E1B1F1D1DE60097355C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA743CDC1E797DC300889148 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F079E4E1FB2279F003B9F99 /* TrustDefender.framework in Frameworks */,
+				D1E6C66B356AD1FB13A5B925 /* Pods_aupar.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2608D47D212397D00098D19E /* EstimoteProximity */ = {
+			isa = PBXGroup;
+			children = (
+				2622193821277F7F0021948C /* BTUtilities.swift */,
+				2608D484212399370098D19E /* ViewController.swift */,
+				2608D485212399370098D19E /* ViewController+UI.swift */,
+				2608D482212398D20098D19E /* UIColor+Extensions.swift */,
+				2608D47E212397EF0098D19E /* CloudManager.swift */,
+				2608D4802123981C0098D19E /* ProximityManager.swift */,
+			);
+			path = EstimoteProximity;
+			sourceTree = "<group>";
+		};
+		3F181E1F1F1D1DE60097355C /* auparunittests */ = {
+			isa = PBXGroup;
+			children = (
+				3F181E201F1D1DE60097355C /* auparunittests.swift */,
+				3F181E221F1D1DE60097355C /* Info.plist */,
+			);
+			path = auparunittests;
+			sourceTree = "<group>";
+		};
+		421632555F6FCCED17185045 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3894730505E5964FD60CA34 /* Pods-aupar.debug.xcconfig */,
+				1911E3FEB1EA30AC7D28ED6D /* Pods-aupar.release.xcconfig */,
+				9259D3D25DDF9CF2AE51FDBE /* Pods-aupar.ad hoc.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		97B8FEDEF3D0F43F4BB54735 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F079E4D1FB2279F003B9F99 /* TrustDefender.framework */,
+				647C46EC9E8739F4C420011B /* Pods_aupar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA743CD61E797DC200889148 = {
+			isa = PBXGroup;
+			children = (
+				CA743CE11E797DC400889148 /* aupar */,
+				3F181E1F1F1D1DE60097355C /* auparunittests */,
+				CA743CE01E797DC400889148 /* Products */,
+				421632555F6FCCED17185045 /* Pods */,
+				97B8FEDEF3D0F43F4BB54735 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CA743CE01E797DC400889148 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA743CDF1E797DC400889148 /* aupar.app */,
+				3F181E1E1F1D1DE60097355C /* auparunittests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA743CE11E797DC400889148 /* aupar */ = {
+			isa = PBXGroup;
+			children = (
+				2608D48821239C260098D19E /* aupar.entitlements */,
+				2608D47D212397D00098D19E /* EstimoteProximity */,
+				CA743CE21E797DC400889148 /* AppDelegate.swift */,
+				CA743CE61E797DC400889148 /* Main.storyboard */,
+				CA743CE91E797DC400889148 /* Assets.xcassets */,
+				CA743CEE1E797DC400889148 /* Info.plist */,
+				CAF551051E82F50000514E44 /* ObjCBridge.h */,
+				3FC25EF11F29831F002A796E /* Launch.storyboard */,
+			);
+			path = aupar;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F181E1D1F1D1DE60097355C /* auparunittests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F181E271F1D1DE60097355C /* Build configuration list for PBXNativeTarget "auparunittests" */;
+			buildPhases = (
+				3F181E1A1F1D1DE60097355C /* Sources */,
+				3F181E1B1F1D1DE60097355C /* Frameworks */,
+				3F181E1C1F1D1DE60097355C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F181E241F1D1DE60097355C /* PBXTargetDependency */,
+			);
+			name = auparunittests;
+			productName = auparunittests;
+			productReference = 3F181E1E1F1D1DE60097355C /* auparunittests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CA743CDE1E797DC300889148 /* aupar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA743CF11E797DC400889148 /* Build configuration list for PBXNativeTarget "aupar" */;
+			buildPhases = (
+				F3C684F07EF28DCB285BC20E /* [CP] Check Pods Manifest.lock */,
+				CA743CDB1E797DC300889148 /* Sources */,
+				CA743CDC1E797DC300889148 /* Frameworks */,
+				CA743CDD1E797DC300889148 /* Resources */,
+				89555368E4F1A63293572FD5 /* [CP] Embed Pods Frameworks */,
+				3F584AB420445FF90030310B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = aupar;
+			productName = aupar;
+			productReference = CA743CDF1E797DC400889148 /* aupar.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CA743CD71E797DC300889148 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "aritec-la";
+				TargetAttributes = {
+					3F181E1D1F1D1DE60097355C = {
+						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+						TestTargetID = CA743CDE1E797DC300889148;
+					};
+					CA743CDE1E797DC300889148 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 9QFB73GJJP;
+						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = CA743CDA1E797DC300889148 /* Build configuration list for PBXProject "aupar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				es,
+			);
+			mainGroup = CA743CD61E797DC200889148;
+			productRefGroup = CA743CE01E797DC400889148 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CA743CDE1E797DC300889148 /* aupar */,
+				3F181E1D1F1D1DE60097355C /* auparunittests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F181E1C1F1D1DE60097355C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA743CDD1E797DC300889148 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA743CEA1E797DC400889148 /* Assets.xcassets in Resources */,
+				3FC25EF21F29831F002A796E /* Launch.storyboard in Resources */,
+				CA743CE81E797DC400889148 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3F584AB420445FF90030310B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\"";
+		};
+		89555368E4F1A63293572FD5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-aupar/Pods-aupar-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ASHorizontalScrollView/ASHorizontalScrollView.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/BadgeSwift/BadgeSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
+				"${BUILT_PRODUCTS_DIR}/CountryPickerSwift/CountryPicker.framework",
+				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IBAnimatable/IBAnimatable.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
+				"${BUILT_PRODUCTS_DIR}/ImageViewer/ImageViewer.framework",
+				"${BUILT_PRODUCTS_DIR}/JSONWebToken/JWT.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainAccess/KeychainAccess.framework",
+				"${BUILT_PRODUCTS_DIR}/LGButton/LGButton.framework",
+				"${BUILT_PRODUCTS_DIR}/MBSegueCollection/MBSegueCollection.framework",
+				"${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/MobilePlayer/MobilePlayer.framework",
+				"${BUILT_PRODUCTS_DIR}/NotificationBannerSwift/NotificationBannerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/PKHUD/PKHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SearchTextField/SearchTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/StyleDecorator/StyleDecorator.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftIconFont/SwiftIconFont.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyGif/SwiftyGif.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ASHorizontalScrollView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BadgeSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CountryPicker.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBAnimatable.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageViewer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWT.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainAccess.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LGButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBSegueCollection.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MarqueeLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MobilePlayer.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NotificationBannerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PKHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SearchTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StyleDecorator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftIconFont.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyGif.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-aupar/Pods-aupar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3C684F07EF28DCB285BC20E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-aupar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F181E1A1F1D1DE60097355C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F181E211F1D1DE60097355C /* auparunittests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA743CDB1E797DC300889148 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2608D4812123981C0098D19E /* ProximityManager.swift in Sources */,
+				2608D486212399370098D19E /* ViewController.swift in Sources */,
+				2622193921277F7F0021948C /* BTUtilities.swift in Sources */,
+				2608D483212398D20098D19E /* UIColor+Extensions.swift in Sources */,
+				2608D487212399370098D19E /* ViewController+UI.swift in Sources */,
+				CA743CE31E797DC400889148 /* AppDelegate.swift in Sources */,
+				2608D47F212397EF0098D19E /* CloudManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3F181E241F1D1DE60097355C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CA743CDE1E797DC300889148 /* aupar */;
+			targetProxy = 3F181E231F1D1DE60097355C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CA743CE61E797DC400889148 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CA743CE71E797DC400889148 /* Base */,
+				3FE660CB2090E4550034DFE2 /* es */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3F181E251F1D1DE60097355C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				INFOPLIST_FILE = auparunittests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aritec-la.auparunittests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/aupar.app/aupar";
+			};
+			name = Debug;
+		};
+		3F181E261F1D1DE60097355C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				INFOPLIST_FILE = auparunittests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aritec-la.auparunittests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/aupar.app/aupar";
+			};
+			name = Release;
+		};
+		3F1D99D820B3745C006291A2 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Ad Hoc";
+		};
+		3F1D99D920B3745C006291A2 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9259D3D25DDF9CF2AE51FDBE /* Pods-aupar.ad hoc.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = aupar/aupar.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 12;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 9QFB73GJJP;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/aupar",
+					"$(PROJECT_DIR)/aupar/Estimote",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = aupar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aritec.aupar.proximity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = "Ad Hoc";
+		};
+		3F1D99DA20B3745C006291A2 /* Ad Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				INFOPLIST_FILE = auparunittests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aritec-la.auparunittests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/aupar.app/aupar";
+			};
+			name = "Ad Hoc";
+		};
+		CA743CEF1E797DC400889148 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CA743CF01E797DC400889148 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA743CF21E797DC400889148 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3894730505E5964FD60CA34 /* Pods-aupar.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = aupar/aupar.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 12;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 9QFB73GJJP;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/aupar",
+					"$(PROJECT_DIR)/aupar/Estimote",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = aupar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aritec.aupar.proximity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		CA743CF31E797DC400889148 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1911E3FEB1EA30AC7D28ED6D /* Pods-aupar.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = aupar/aupar.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 12;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 9QFB73GJJP;
+				ENABLE_BITCODE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/aupar",
+					"$(PROJECT_DIR)/aupar/Estimote",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = aupar/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.aritec.aupar.proximity;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "${PROJECT_NAME}/ObjCBridge.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F181E271F1D1DE60097355C /* Build configuration list for PBXNativeTarget "auparunittests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F181E251F1D1DE60097355C /* Debug */,
+				3F181E261F1D1DE60097355C /* Release */,
+				3F1D99DA20B3745C006291A2 /* Ad Hoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA743CDA1E797DC300889148 /* Build configuration list for PBXProject "aupar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA743CEF1E797DC400889148 /* Debug */,
+				CA743CF01E797DC400889148 /* Release */,
+				3F1D99D820B3745C006291A2 /* Ad Hoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA743CF11E797DC400889148 /* Build configuration list for PBXNativeTarget "aupar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA743CF21E797DC400889148 /* Debug */,
+				CA743CF31E797DC400889148 /* Release */,
+				3F1D99D920B3745C006291A2 /* Ad Hoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CA743CD71E797DC300889148 /* Project object */;
+}
